@@ -61,17 +61,12 @@ h1{font-size:clamp(64px,10vw,140px);font-weight:800;line-height:.86;letter-spaci
 .lede{font-size:clamp(19px,1.8vw,22px);color:var(--soft);max-width:34ch;margin-top:26px}
 .lede b{color:var(--ink);font-weight:700}
 
-/* flow */
-.flow{display:flex;flex-direction:column}
-.flow-title{font-family:var(--mono);font-size:12px;color:var(--soft);margin-bottom:14px;letter-spacing:.02em}
-.node{display:flex;align-items:center;gap:16px;padding:15px 20px;border-radius:14px;background:var(--blue);color:var(--ink);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
-.node:hover{transform:translateX(6px);box-shadow:0 10px 24px -14px rgba(94,68,46,.55)}
-.node .k{font-family:var(--mono);font-size:11.5px;min-width:76px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
-.node b{font-size:19px;font-weight:600;line-height:1.25}
-.node.final{background:var(--walnut);color:var(--butter)}
-.node.final .k{color:var(--butter)}
-.link{position:relative;height:24px;margin-left:46px;width:2px;background:repeating-linear-gradient(var(--walnut) 0 4px,transparent 4px 8px);opacity:.55;animation:flow 1.2s linear infinite;background-size:2px 8px}
-@keyframes flow{to{background-position:0 8px}}
+/* demo card */
+.demo-card{position:relative;display:block;border-radius:18px;overflow:hidden;border:1.5px solid var(--walnut);background:#fff;box-shadow:0 24px 48px -28px rgba(94,68,46,.6);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.demo-card:hover{transform:translateY(-4px);box-shadow:0 32px 56px -28px rgba(94,68,46,.7)}
+.demo-card img{width:100%;height:auto}
+.demo-tag{position:absolute;right:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;background:var(--walnut);color:var(--butter);padding:10px 18px;border-radius:999px;font-weight:700;font-size:15px}
+.demo-tag svg{width:16px;height:16px}
 
 /* sections */
 section{padding-block:112px 0}
@@ -140,8 +135,6 @@ footer .btn.ghost:hover{background:rgba(255,248,226,.08)}
   .phases{grid-template-columns:1fr}
   .phase:nth-child(even){padding-left:0;border-left:0}
   .phase+.phase{border-top:1.5px solid var(--line)}
-  .node b{font-size:17px}
-  .node .k{min-width:62px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -155,7 +148,7 @@ footer .btn.ghost:hover{background:rgba(255,248,226,.08)}
   <div class="wrap">
     <nav>
       <a class="name" href="#top">Tal Zahor</a>
-      <div class="links"><a href="#project">Project</a><a href="#fit">Fit</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+      <div class="links"><a href="#project">Project</a><a href="demo/" target="_blank" rel="noopener">Live demo</a><a href="#fit">Fit</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
       <a class="btn ghost" href="assets/Tal-Zahor-CV.pdf" target="_blank" rel="noopener">CV
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg></a>
     </nav>
@@ -164,18 +157,14 @@ footer .btn.ghost:hover{background:rgba(255,248,226,.08)}
         <h1>Tal<br>Zahor</h1>
         <p class="lede">Industrial Engineering &amp; Management student at Afeka. <b>I plan the work, read the data, and make the call</b>, for product, project and data teams.</p>
         <div class="cta">
-          <a class="btn" href="#project">See my project</a>
-          <a class="btn ghost" href="mailto:tal.zahor@gmail.com">tal.zahor@gmail.com</a>
+          <a class="btn" href="demo/" target="_blank" rel="noopener">Try the live demo</a>
+          <a class="btn ghost" href="#project">See my project</a>
         </div>
       </div>
-      <div class="flow" role="img" aria-label="How my project works: 150 raw customer comments, classified by AI on 4 dimensions, tested on a locked holdout, turned into a candidate pain point with evidence, and the Product Manager decides.">
-        <p class="flow-title">voice-of-customer-ai-copilot / process</p>
-        <div class="node"><span class="k">Input</span><b>150 raw customer comments</b></div><div class="link"></div>
-        <div class="node"><span class="k">AI</span><b>Classify on 4 dimensions</b></div><div class="link"></div>
-        <div class="node"><span class="k">Test</span><b>Locked holdout evaluation</b></div><div class="link"></div>
-        <div class="node"><span class="k">Signal</span><b>Candidate pain point + evidence</b></div><div class="link"></div>
-        <div class="node final"><span class="k">Human</span><b>The PM decides</b></div>
-      </div>
+      <a class="demo-card" href="demo/" target="_blank" rel="noopener" aria-label="Open the live demo of the Voice of Customer AI Copilot">
+        <img src="assets/prototype-overview.png" alt="Voice of Customer AI Copilot overview screen" width="1440" height="1080">
+        <span class="demo-tag">Try the live demo<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></span>
+      </a>
     </header>
   </div>
 </div>
@@ -197,7 +186,7 @@ footer .btn.ghost:hover{background:rgba(255,248,226,.08)}
         <a class="btn ghost" href="assets/VoC-Copilot-Case-Study.pdf" target="_blank" rel="noopener">Case study PDF</a>
       </div>
       <div class="shots">
-        <figure><img src="assets/prototype-overview.png" alt="Overview screen: 150 feedback records grouped by theme, sentiment and severity, with Document Upload flagged as the candidate pain point" width="1440" height="1080"></figure>
+        <figure><img src="assets/prototype-product-actions.png" alt="Product Actions screen: AI-suggested problem statement, PM framing, investigation questions and decision status" width="1440" height="900" loading="lazy"></figure>
         <div class="stack">
           <figure><img src="assets/prototype-insights.png" alt="Insights screen: AI summary, supporting metrics and original customer evidence" width="1440" height="1171" loading="lazy"></figure>
           <figure><img src="assets/prototype-evidence.png" alt="Evidence screen: table of the 30 original Document Upload comments with filters" width="1440" height="1074" loading="lazy"></figure>
