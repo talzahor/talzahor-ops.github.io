@@ -84,11 +84,11 @@ h2{font-size:clamp(38px,5.4vw,68px);font-weight:800;letter-spacing:-.035em;line-
 .demo-tag svg{width:16px;height:16px}
 
 /* phases */
-.phases-band{background:var(--butter);margin-top:72px;border-block:1.5px solid var(--line)}
+.phases-band{background:transparent;margin-top:72px;border-block:1.5px solid var(--line)}
 .phases{display:grid;grid-template-columns:repeat(4,1fr)}
-.phase{padding:36px 28px 40px 0;display:flex;flex-direction:column;gap:10px;min-width:0}
-.phase+.phase{padding-left:28px;border-left:1.5px solid var(--line)}
-.phase .step{font-family:var(--mono);font-size:12px;color:var(--soft)}
+.phase{padding:28px 22px 30px;display:flex;flex-direction:column;gap:10px;min-width:0;background:#FFF1C9;border-radius:16px;margin:18px 10px}
+.phase+.phase{padding-left:22px;border-left:0}
+.phase .step{font-family:var(--mono);font-size:12px;color:#80652B}
 .phase h3{font-size:24px;font-weight:700;color:var(--walnut)}
 .phase p{color:var(--soft);font-size:16px}
 .phase .num{margin-top:auto;padding-top:14px;font-family:var(--mono);font-size:13px;color:var(--ink);font-variant-numeric:tabular-nums}
@@ -101,8 +101,8 @@ h2{font-size:clamp(38px,5.4vw,68px);font-weight:800;letter-spacing:-.035em;line-
 .lens p{margin-top:10px;color:var(--ink)}
 
 /* experience */
-.exp{margin-top:40px;border-top:1.5px solid var(--walnut)}
-.exp .row{display:grid;grid-template-columns:170px 1.1fr 1.3fr;gap:24px;padding-block:24px;border-bottom:1.5px solid var(--line);align-items:baseline}
+.exp{margin-top:40px;border-top:1.5px solid var(--walnut);display:grid;gap:12px}
+.exp .row{display:grid;grid-template-columns:170px 1.1fr 1.3fr;gap:24px;padding:22px 20px;background:#FCE5E3;border:1px solid #F4D0CE;border-radius:14px;align-items:baseline}
 .exp .d{font-family:var(--mono);font-size:13px;color:var(--soft);font-variant-numeric:tabular-nums}
 .exp h3{font-size:21px;font-weight:700;color:var(--walnut);line-height:1.25}
 .exp h3 small{display:block;font-size:15px;font-weight:500;color:var(--soft);margin-top:2px}
@@ -150,16 +150,14 @@ footer .btn.ghost:hover{background:rgba(255,248,226,.08)}
 <div class="hero-band">
   <div class="wrap">
     <nav>
-      <a class="name" href="#top">Tal Zahor</a>
       <div class="links"><a href="#project">Project</a><a href="#fit">About &amp; approach</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
       <a class="btn ghost" href="assets/Tal-Zahor-CV.pdf" target="_blank" rel="noopener">CV
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg></a>
     </nav>
     <header class="hero" id="top">
       <div>
-        <p class="hero-kicker">Industrial Engineering &amp; Management · Product · Data · Operations</p>
         <h1>Tal Zahor</h1>
-        <p class="lede">I’m a third-year Industrial Engineering &amp; Management student at Afeka, interested in how <b>people, data and technology</b> can come together to solve meaningful problems. Through hands-on projects and experience in training leadership, operational coordination and customer-facing roles, I’ve developed a structured and curious approach to understanding challenges, connecting information, and turning insights into practical next steps. I’m especially drawn to work that combines analytical thinking, collaboration and continuous improvement.</p>
+        <p class="lede">I’m a third-year Industrial Engineering &amp; Management student at Afeka, interested in how <b>people, data and technology</b> can solve meaningful problems. Through hands-on projects and experience in training leadership, operations and customer-facing roles, I bring a structured, curious approach to turning challenges into practical solutions.</p>
         <div class="cta">
           <a class="btn" href="#project">Explore my project</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/talzahor/" target="_blank" rel="noopener">Connect on LinkedIn</a>
