@@ -16,9 +16,10 @@
 <style>
 :root{
   /* palette (from Tal's swatch) */
-  --cream:#F7F9FC;   /* cool off-white page ground */
-  --butter:#E8EEF8;  /* pale blue highlight bands */
-  --blue:#DCE7F5;    /* soft blue supporting surfaces */
+  --cream:#F7F8FA;   /* warm, clean page ground */
+  --butter:#F5DFA8;  /* soft amber accents */
+  --blue:#DCE7F5;    /* powder blue supporting surfaces */
+  --sage:#DCE9E5;    /* muted sage secondary accents */
   --walnut:#173A63;  /* deep navy: primary brand color */
   /* derived */
   --ink:#14243A;
@@ -61,7 +62,7 @@ nav .links a:hover{color:var(--walnut)}
 .hero .cta{justify-content:center}
 .hero-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin-bottom:18px}
 h1{font-size:clamp(54px,8.5vw,112px);font-weight:800;line-height:1;letter-spacing:-.045em;color:var(--walnut);white-space:nowrap}
-h1::after{content:"";display:block;width:72px;height:5px;border-radius:99px;background:#6F91B8;margin:20px auto 0}
+h1::after{content:"";display:block;width:72px;height:5px;border-radius:99px;background:var(--butter);margin:20px auto 0}
 .lede{font-size:clamp(19px,1.8vw,22px);color:var(--soft);max-width:34ch;margin-top:26px}
 .lede b{color:var(--ink);font-weight:700}
 
@@ -84,7 +85,7 @@ h2{font-size:clamp(38px,5.4vw,68px);font-weight:800;letter-spacing:-.035em;line-
 .demo-tag svg{width:16px;height:16px}
 
 /* phases */
-.phases-band{background:var(--butter);margin-top:72px;border-block:1.5px solid var(--line)}
+.phases-band{background:rgba(245,223,168,.48);margin-top:72px;border-block:1.5px solid var(--line)}
 .phases{display:grid;grid-template-columns:repeat(4,1fr)}
 .phase{padding:36px 28px 40px 0;display:flex;flex-direction:column;gap:10px;min-width:0}
 .phase+.phase{padding-left:28px;border-left:1.5px solid var(--line)}
@@ -108,10 +109,10 @@ h2{font-size:clamp(38px,5.4vw,68px);font-weight:800;letter-spacing:-.035em;line-
 .exp h3 small{display:block;font-size:15px;font-weight:500;color:var(--soft);margin-top:2px}
 .exp p{color:var(--soft)}
 .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
-.skills span{background:var(--butter);color:var(--ink);border-radius:999px;padding:8px 16px;font-size:15px;font-weight:600}
+.skills span{background:var(--sage);color:var(--ink);border-radius:999px;padding:8px 16px;font-size:15px;font-weight:600}
 
 /* footer */
-footer{margin-top:128px;background:#101828;color:#F5F7FB;padding-block:88px 56px}
+footer{margin-top:128px;background:var(--walnut);color:var(--cream);padding-block:88px 56px}
 footer h2{color:var(--butter);font-size:clamp(56px,9vw,120px)}
 footer .lede{color:var(--blue)}
 footer .btn{background:var(--butter);color:var(--walnut)}
