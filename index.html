@@ -8,23 +8,23 @@
 <meta property="og:title" content="Tal Zahor | Portfolio">
 <meta property="og:description" content="A product case study exploring AI-assisted customer feedback analysis, alongside experience in training leadership, operations and customer service.">
 <meta property="og:image" content="https://talzahor.github.io/talzahor-ops.github.io/assets/prototype-overview.png">
-<meta name="theme-color" content="#F5F7FB">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235E442E'/%3E%3Ctext x='16' y='21.5' font-family='Arial' font-weight='700' font-size='14' fill='%23FFEFB9' text-anchor='middle'%3ETZ%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#F7F9FC">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23142B4A'/%3E%3Ctext x='16' y='21.5' font-family='Arial' font-weight='700' font-size='14' fill='%23E8EEF8' text-anchor='middle'%3ETZ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   /* palette (from Tal's swatch) */
-  --cream:#F5F7FB;   /* vanilla cream: page ground */
-  --butter:#EDF2FF;  /* buttercream: highlight bands */
-  --blue:#EDF2FF;    /* powder blue: process nodes */
-  --walnut:#3159D9;  /* walnut brown: ink + dark bands */
+  --cream:#F7F9FC;   /* cool off-white page ground */
+  --butter:#E8EEF8;  /* pale blue highlight bands */
+  --blue:#DCE7F5;    /* soft blue supporting surfaces */
+  --walnut:#173A63;  /* deep navy: primary brand color */
   /* derived */
-  --ink:#101828;
-  --soft:#667085;
-  --line:#E5E9F0;
-  --grid:rgba(23,32,51,.06);
+  --ink:#14243A;
+  --soft:#586B82;
+  --line:#DCE4EE;
+  --grid:rgba(23,58,99,.075);
   --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
   --mono:"Martian Mono",ui-monospace,Menlo,monospace;
   --ease:cubic-bezier(.16,1,.3,1);
@@ -59,7 +59,9 @@ nav .links a:hover{color:var(--walnut)}
 .hero{padding-block:56px 88px;text-align:center}
 .hero .lede{margin-inline:auto;max-width:58ch}
 .hero .cta{justify-content:center}
+.hero-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);margin-bottom:18px}
 h1{font-size:clamp(54px,8.5vw,112px);font-weight:800;line-height:1;letter-spacing:-.045em;color:var(--walnut);white-space:nowrap}
+h1::after{content:"";display:block;width:72px;height:5px;border-radius:99px;background:#6F91B8;margin:20px auto 0}
 .lede{font-size:clamp(19px,1.8vw,22px);color:var(--soft);max-width:34ch;margin-top:26px}
 .lede b{color:var(--ink);font-weight:700}
 
@@ -155,8 +157,9 @@ footer .btn.ghost:hover{background:rgba(255,248,226,.08)}
     </nav>
     <header class="hero" id="top">
       <div>
+        <p class="hero-kicker">Industrial Engineering &amp; Management · Product · Data · Operations</p>
         <h1>Tal Zahor</h1>
-        <p class="lede">Third-year Industrial Engineering &amp; Management student at Afeka, with experience in <b>training leadership, operational coordination and customer-facing roles</b>. I bring a structured, curious approach to understanding problems and improving how work gets done.</p>
+        <p class="lede">I’m a third-year Industrial Engineering &amp; Management student at Afeka, interested in how <b>people, data and technology</b> can come together to solve meaningful problems. Through hands-on projects and experience in training leadership, operational coordination and customer-facing roles, I’ve developed a structured and curious approach to understanding challenges, connecting information, and turning insights into practical next steps. I’m especially drawn to work that combines analytical thinking, collaboration and continuous improvement.</p>
         <div class="cta">
           <a class="btn" href="#project">Explore my project</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/talzahor/" target="_blank" rel="noopener">Connect on LinkedIn</a>
