@@ -3,11 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tal Zahor · Product, Project &amp; Data</title>
-<meta name="description" content="Tal Zahor, Industrial Engineering & Management student at Afeka. Portfolio for product, project management and data analyst roles.">
-<meta property="og:title" content="Tal Zahor · Product, Project & Data">
-<meta property="og:description" content="I plan the work, read the data, and make the call. Featured project: Voice of Customer AI Copilot.">
-<meta property="og:image" content="https://talzahor-ops.github.io/assets/prototype-overview.png">
+<title>Tal Zahor | Industrial Engineering & Management</title>
+<meta name="description" content="Tal Zahor — Industrial Engineering & Management student interested in product, project, data and business roles. Explore her Voice of Customer AI Copilot case study.">
+<meta property="og:title" content="Tal Zahor | Portfolio">
+<meta property="og:description" content="Turning customer needs, data and structured thinking into clearer decisions. Explore my work and experience.">
+<meta property="og:image" content="https://talzahor.github.io/talzahor-ops.github.io/assets/prototype-overview.png">
+<meta property="og:url" content="https://talzahor.github.io/talzahor-ops.github.io/">
 <meta name="theme-color" content="#FFF8E2">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235E442E'/%3E%3Ctext x='16' y='21.5' font-family='Arial' font-weight='700' font-size='14' fill='%23FFEFB9' text-anchor='middle'%3ETZ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,12 +16,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  /* palette (from Tal's swatch) */
-  --cream:#FFF8E2;   /* vanilla cream: page ground */
-  --butter:#FFEFB9;  /* buttercream: highlight bands */
-  --blue:#BCD1DE;    /* powder blue: process nodes */
-  --walnut:#5E442E;  /* walnut brown: ink + dark bands */
-  /* derived */
+  /* Existing palette — intentionally preserved */
+  --cream:#FFF8E2;
+  --butter:#FFEFB9;
+  --blue:#BCD1DE;
+  --walnut:#5E442E;
   --ink:#4A3423;
   --soft:#6E5641;
   --line:#E4D3A6;
@@ -32,110 +32,160 @@
 *{box-sizing:border-box;margin:0}
 html{scroll-behavior:smooth;scroll-padding-top:24px}
 ::selection{background:var(--walnut);color:var(--butter)}
-body{background:var(--cream);color:var(--ink);font-family:var(--display);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{background:var(--cream);color:var(--ink);font-family:var(--display);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-underline-offset:3px}
 :focus-visible{outline:2.5px solid var(--walnut);outline-offset:3px;border-radius:6px}
 img{max-width:100%;display:block}
 h1,h2,h3{text-wrap:balance}
 .wrap{max-width:1200px;margin:0 auto;padding-inline:32px}
+.skip-link{position:absolute;left:16px;top:-60px;background:var(--walnut);color:var(--cream);padding:10px 16px;border-radius:999px;z-index:20}
+.skip-link:focus{top:12px}
 
-/* nav */
-nav{display:flex;justify-content:space-between;align-items:center;padding-block:22px;font-size:15px;gap:16px}
-nav .name{font-weight:700;font-size:18px;text-decoration:none}
-nav .links{display:flex;gap:28px}
+/* Navigation */
+nav{display:flex;justify-content:space-between;align-items:center;padding-block:22px;font-size:15px;gap:20px}
+nav .name{font-weight:700;font-size:18px;text-decoration:none;white-space:nowrap}
+nav .links{display:flex;gap:26px;align-items:center}
 nav .links a{text-decoration:none;color:var(--soft);font-weight:500}
 nav .links a:hover{color:var(--walnut)}
 
-/* buttons */
-.btn{display:inline-flex;align-items:center;gap:8px;background:var(--walnut);color:var(--cream);padding:13px 22px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .35s var(--ease),background .2s}
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--walnut);color:var(--cream);padding:13px 22px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .35s var(--ease),background .2s}
 .btn:hover{transform:translateY(-2px);background:var(--ink)}
 .btn.ghost{background:transparent;color:var(--walnut);box-shadow:inset 0 0 0 1.5px var(--walnut)}
 .btn.ghost:hover{background:var(--butter)}
 .btn svg{width:16px;height:16px;flex:none}
-.cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
 
-/* hero */
+/* Hero */
 .hero-band{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:32px 32px;border-bottom:1.5px solid var(--line)}
-.hero{padding-block:56px 88px;text-align:center}
-.hero .lede{margin-inline:auto}
-.hero .cta{justify-content:center}
-h1{font-size:clamp(64px,10vw,140px);font-weight:800;line-height:.86;letter-spacing:-.045em;color:var(--walnut)}
-.lede{font-size:clamp(19px,1.8vw,22px);color:var(--soft);max-width:34ch;margin-top:26px}
+.hero{padding-block:58px 82px;text-align:center;max-width:900px;margin-inline:auto}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+h1{font-size:clamp(64px,10vw,132px);font-weight:800;line-height:.86;letter-spacing:-.05em;color:var(--walnut);margin-top:18px}
+.lede{font-size:clamp(19px,1.8vw,22px);color:var(--soft);max-width:38ch;margin:25px auto 0}
 .lede b{color:var(--ink);font-weight:700}
+.hero .cta{justify-content:center}
+.hero-meta{display:flex;justify-content:center;gap:10px 22px;flex-wrap:wrap;margin-top:30px;color:var(--soft);font-size:14px}
+.hero-meta span{display:inline-flex;align-items:center;gap:7px}
+.hero-meta span+span:before{content:"·";margin-right:10px;color:var(--walnut)}
 
+/* Sections */
+section{padding-block:104px 0}
+.section-kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin-bottom:16px}
+h2{font-size:clamp(38px,5.4vw,66px);font-weight:800;letter-spacing:-.04em;line-height:.98;color:var(--walnut)}
+.intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:start}
+.intro-copy p{color:var(--soft);font-size:19px;max-width:58ch}
+.intro-copy p+p{margin-top:14px}
+.intro-copy b{color:var(--ink)}
+.about-points{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.about-point{border-top:1.5px solid var(--line);padding-top:13px}
+.about-point b{display:block;color:var(--walnut);font-size:18px}
+.about-point span{display:block;color:var(--soft);font-size:14px;margin-top:3px}
 
-/* sections */
-section{padding-block:112px 0}
-h2{font-size:clamp(38px,5.4vw,68px);font-weight:800;letter-spacing:-.035em;line-height:.98;color:var(--walnut)}
-.intro{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.intro p:first-child{margin-top:.35em}
-.intro p{color:var(--soft);font-size:19px;max-width:52ch}
-.intro p+p{margin-top:14px}
-.intro b{color:var(--ink)}
-.shots{display:grid;grid-template-columns:1.45fr 1fr;gap:20px;margin-top:48px}
-.shots .stack{display:grid;gap:20px;min-width:0}
-.shots figure{border-radius:14px;overflow:hidden;border:1.5px solid var(--line);background:#fff}
+/* Project */
+.project-heading{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:end}
+.project-heading p{color:var(--soft);font-size:19px;max-width:56ch}
+.project-heading p b{color:var(--ink)}
+.project-actions{margin-top:24px}
+.project-note{margin-top:16px;color:var(--soft);font-size:13px}
+.shots{display:grid;grid-template-columns:1.4fr 1fr;gap:18px;margin-top:42px;align-items:stretch}
+.shots .stack{display:grid;gap:18px;min-width:0}
+.shots figure{border-radius:14px;overflow:hidden;border:1.5px solid var(--line);background:#fff;min-height:0}
 .shots img{width:100%;height:100%;object-fit:cover;object-position:top}
 .demo-card{position:relative;display:block;border-radius:14px;overflow:hidden;border:1.5px solid var(--walnut);background:#fff;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
 .demo-card:hover{transform:translateY(-4px);box-shadow:0 28px 48px -28px rgba(94,68,46,.7)}
-.demo-tag{position:absolute;right:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;background:var(--walnut);color:var(--butter);padding:12px 20px;border-radius:999px;font-weight:700;font-size:16px;box-shadow:0 10px 24px -10px rgba(94,68,46,.8)}
+.demo-card img{height:100%;object-fit:cover;object-position:top}
+.demo-tag{position:absolute;right:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;background:var(--walnut);color:var(--butter);padding:12px 20px;border-radius:999px;font-weight:700;font-size:15px;box-shadow:0 10px 24px -10px rgba(94,68,46,.8)}
 .demo-tag svg{width:16px;height:16px}
-
-/* phases */
-.phases-band{background:var(--butter);margin-top:72px;border-block:1.5px solid var(--line)}
+.project-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1.5px solid var(--line);border-radius:14px;overflow:hidden;margin-top:34px}
+.fact{background:var(--butter);padding:22px}
+.fact strong{display:block;font-size:34px;line-height:1.1;color:var(--walnut);letter-spacing:-.04em}
+.fact span{display:block;color:var(--soft);font-size:13px;margin-top:7px}
+.phases-band{background:var(--butter);margin-top:62px;border-block:1.5px solid var(--line)}
 .phases{display:grid;grid-template-columns:repeat(4,1fr)}
-.phase{padding:36px 28px 40px 0;display:flex;flex-direction:column;gap:10px;min-width:0}
-.phase+.phase{padding-left:28px;border-left:1.5px solid var(--line)}
-.phase .step{font-family:var(--mono);font-size:12px;color:var(--soft)}
-.phase h3{font-size:24px;font-weight:700;color:var(--walnut)}
-.phase p{color:var(--soft);font-size:16px}
-.phase .num{margin-top:auto;padding-top:14px;font-family:var(--mono);font-size:13px;color:var(--ink);font-variant-numeric:tabular-nums}
-.phase .num b{display:block;font-family:var(--display);font-size:40px;font-weight:800;letter-spacing:-.03em;color:var(--walnut);line-height:1.05}
+.phase{padding:32px 24px 34px 0;display:flex;flex-direction:column;gap:9px;min-width:0}
+.phase+.phase{padding-left:24px;border-left:1.5px solid var(--line)}
+.phase .step{font-family:var(--mono);font-size:11px;color:var(--soft);text-transform:uppercase;letter-spacing:.06em}
+.phase h3{font-size:22px;font-weight:700;color:var(--walnut)}
+.phase p{color:var(--soft);font-size:15px}
+.decision{margin-top:26px;padding:26px 30px;border-left:4px solid var(--walnut);background:rgba(188,209,222,.42);border-radius:0 12px 12px 0}
+.decision .label{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--soft)}
+.decision p{font-size:18px;color:var(--ink);margin-top:7px;max-width:78ch}
+.decision b{color:var(--walnut)}
 
-/* lenses */
-.lenses{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
-.lens{background:var(--blue);border-radius:18px;padding:28px}
-.lens h3{font-size:26px;font-weight:700;color:var(--walnut)}
-.lens p{margin-top:10px;color:var(--ink)}
+/* How I work */
+.lenses{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.lens{background:var(--blue);border-radius:16px;padding:26px}
+.lens .number{font-family:var(--mono);font-size:11px;color:var(--soft)}
+.lens h3{font-size:25px;font-weight:700;color:var(--walnut);margin-top:10px}
+.lens p{margin-top:9px;color:var(--ink);font-size:16px}
 
-/* experience */
-.exp{margin-top:40px;border-top:1.5px solid var(--walnut)}
-.exp .row{display:grid;grid-template-columns:170px 1.1fr 1.3fr;gap:24px;padding-block:24px;border-bottom:1.5px solid var(--line);align-items:baseline}
-.exp .d{font-family:var(--mono);font-size:13px;color:var(--soft);font-variant-numeric:tabular-nums}
-.exp h3{font-size:21px;font-weight:700;color:var(--walnut);line-height:1.25}
-.exp h3 small{display:block;font-size:15px;font-weight:500;color:var(--soft);margin-top:2px}
-.exp p{color:var(--soft)}
-.skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
-.skills span{background:var(--butter);color:var(--ink);border-radius:999px;padding:8px 16px;font-size:15px;font-weight:600}
+/* Experience */
+.exp{margin-top:34px;border-top:1.5px solid var(--walnut)}
+.exp .row{display:grid;grid-template-columns:155px 1.05fr 1.5fr;gap:26px;padding-block:23px;border-bottom:1.5px solid var(--line);align-items:start}
+.exp .d{font-family:var(--mono);font-size:12px;color:var(--soft);font-variant-numeric:tabular-nums;padding-top:5px}
+.exp h3{font-size:20px;font-weight:700;color:var(--walnut);line-height:1.25}
+.exp h3 small{display:block;font-size:14px;font-weight:500;color:var(--soft);margin-top:4px}
+.exp p{color:var(--soft);font-size:16px}
+.education-note{color:var(--soft);font-size:15px;margin-top:10px}
+.skill-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+.skill-group{border-top:1.5px solid var(--walnut);padding-top:14px}
+.skill-group h3{font-size:17px;color:var(--walnut)}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.skills span{background:var(--butter);color:var(--ink);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:600}
+.language-line{margin-top:24px;color:var(--soft);font-size:15px}
+.language-line b{color:var(--walnut)}
 
-/* footer */
-footer{margin-top:128px;background:var(--walnut);color:var(--cream);padding-block:88px 56px}
-footer h2{color:var(--butter);font-size:clamp(56px,9vw,120px)}
-footer .lede{color:var(--blue)}
+/* Footer */
+footer{margin-top:118px;background:var(--walnut);color:var(--cream);padding-block:82px 42px}
+footer h2{color:var(--butter);font-size:clamp(54px,9vw,112px)}
+footer .lede{color:var(--blue);margin:16px 0 0}
 footer .btn{background:var(--butter);color:var(--walnut)}
 footer .btn:hover{background:var(--cream)}
 footer .btn.ghost{background:transparent;color:var(--cream);box-shadow:inset 0 0 0 1.5px var(--blue)}
 footer .btn.ghost:hover{background:rgba(255,248,226,.08)}
-.fine{margin-top:72px;font-family:var(--mono);font-size:12px;color:var(--blue);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.fine{margin-top:58px;padding-top:18px;border-top:1px solid rgba(188,209,222,.35);font-family:var(--mono);font-size:11px;color:var(--blue);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.social-link{color:var(--cream);font-weight:600;text-decoration:none}
+.social-link:hover{text-decoration:underline}
 
 @media (max-width:900px){
-  .wrap{padding-inline:max(16px,env(safe-area-inset-left,0px))}
-  nav .links{display:none}
-  .hero{padding-block:24px 64px}
-  .intro{grid-template-columns:1fr;gap:20px}
+  .wrap{padding-inline:22px}
+  nav{flex-wrap:wrap}
+  nav .links{order:3;width:100%;justify-content:center;gap:20px;flex-wrap:wrap;padding-top:5px}
+  .hero{padding-block:38px 64px}
+  .intro,.project-heading{grid-template-columns:1fr;gap:20px}
   .shots{grid-template-columns:1fr}
+  .shots .stack{grid-template-columns:1fr 1fr}
+  .project-facts{grid-template-columns:repeat(2,1fr)}
   .phases{grid-template-columns:1fr 1fr}
-  .phase,.phase+.phase{padding:28px 16px 28px 0;border-left:0}
+  .phase,.phase+.phase{padding:26px 16px 26px 0;border-left:0}
   .phase:nth-child(even){padding-left:16px;border-left:1.5px solid var(--line)}
   .phase:nth-child(n+3){border-top:1.5px solid var(--line)}
-  .lenses{grid-template-columns:1fr}
-  .exp .row{grid-template-columns:1fr;gap:4px}
-  section{padding-block:80px 0}
+  .lenses,.skill-groups{grid-template-columns:1fr}
+  .exp .row{grid-template-columns:130px 1fr;gap:8px 18px}
+  .exp p{grid-column:2}
+  section{padding-block:82px 0}
 }
 @media (max-width:520px){
+  body{font-size:16px}
+  .wrap{padding-inline:18px}
+  nav{gap:14px}
+  nav .links{gap:12px 18px;font-size:14px}
+  .hero{padding-block:28px 54px}
+  .hero-meta{gap:7px 12px}
+  .hero-meta span+span:before{margin-right:5px}
+  .about-points{grid-template-columns:1fr;gap:12px}
+  .shots .stack{grid-template-columns:1fr}
+  .project-facts{grid-template-columns:1fr 1fr}
+  .fact{padding:16px}
+  .fact strong{font-size:28px}
   .phases{grid-template-columns:1fr}
   .phase:nth-child(even){padding-left:0;border-left:0}
   .phase+.phase{border-top:1.5px solid var(--line)}
+  .exp .row{grid-template-columns:1fr;gap:4px}
+  .exp p{grid-column:1;margin-top:4px}
+  .decision{padding:20px}
+  footer{margin-top:88px;padding-block:64px 34px}
+  .fine{margin-top:42px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -144,104 +194,177 @@ footer .btn.ghost:hover{background:rgba(255,248,226,.08)}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <div class="hero-band">
   <div class="wrap">
-    <nav>
+    <nav aria-label="Main navigation">
       <a class="name" href="#top">Tal Zahor</a>
-      <div class="links"><a href="#project">Project</a><a href="#fit">Fit</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
-      <a class="btn ghost" href="assets/Tal-Zahor-CV.pdf" target="_blank" rel="noopener">CV
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg></a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#project">Featured project</a>
+        <a href="#approach">My approach</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn ghost" href="assets/Tal-Zahor-CV.pdf" target="_blank" rel="noopener">Download CV
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg>
+      </a>
     </nav>
     <header class="hero" id="top">
-      <div>
-        <h1>Tal<br>Zahor</h1>
-        <p class="lede">Industrial Engineering &amp; Management student at Afeka. <b>I plan the work, read the data, and make the call</b>, for product, project and data teams.</p>
-        <div class="cta">
-          <a class="btn" href="#project">See my project</a>
-          <a class="btn ghost" href="mailto:tal.zahor@gmail.com">tal.zahor@gmail.com</a>
-        </div>
+      <p class="eyebrow">Industrial Engineering &amp; Management · Afeka</p>
+      <h1>Tal<br>Zahor</h1>
+      <p class="lede">I’m interested in how <b>people, data and processes</b> come together to solve meaningful problems — and turn insights into clear, practical decisions.</p>
+      <div class="cta">
+        <a class="btn" href="#project">Explore my work</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/talzahor/" target="_blank" rel="noopener">Connect on LinkedIn
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg>
+        </a>
+      </div>
+      <div class="hero-meta">
+        <span>Herzliya, Israel</span>
+        <span>Product · Project · Data · Operations</span>
       </div>
     </header>
   </div>
 </div>
 
-<main>
-  <section id="project">
+<main id="main">
+  <section id="about">
     <div class="wrap">
+      <p class="section-kicker">A little about me</p>
       <div class="intro">
-        <h2>Voice of Customer<br>AI Copilot</h2>
-        <div>
-          <p>Product Managers get feedback as messy free text. I built a tool that sorts 150 customer comments with AI, then <b>tested how far the AI could be trusted</b> before deciding what it's allowed to do.</p>
-          <p>The result: AI groups the feedback, the evidence stays one click away, and <b>the PM makes the decision</b>.</p>
+        <h2>Curious by nature.<br>Structured by training.</h2>
+        <div class="intro-copy">
+          <p>I’m a third-year Industrial Engineering &amp; Management student at Afeka, drawn to roles that combine analytical thinking, collaboration and problem-solving.</p>
+          <p>My experience spans customer service, social media and military training leadership. Across these settings, I’ve learned to understand different needs, organize complex work and communicate clearly with people.</p>
+          <p>I’m now building on that experience through hands-on projects that connect <b>customer insight, data analysis and product thinking</b>.</p>
         </div>
       </div>
-      <div class="cta">
-        <a class="btn" href="demo/" target="_blank" rel="noopener">Try the live demo
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></a>
-        <a class="btn ghost" href="https://github.com/talzahor-ops/voice-of-customer-ai-copilot" target="_blank" rel="noopener">View on GitHub</a>
-        <a class="btn ghost" href="assets/VoC-Copilot-Case-Study.pdf" target="_blank" rel="noopener">Case study PDF</a>
-      </div>
-      <div class="shots">
-        <a class="demo-card" href="demo/" target="_blank" rel="noopener" aria-label="Try the live demo of the Voice of Customer AI Copilot">
-          <img src="assets/prototype-overview.png" alt="Overview screen: 150 feedback records grouped by theme, sentiment and severity, with Document Upload flagged as the candidate pain point" width="1440" height="1080">
-          <span class="demo-tag">Try the live demo<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></span>
-        </a>
-        <div class="stack">
-          <figure><img src="assets/prototype-insights.png" alt="Insights screen: AI summary, supporting metrics and original customer evidence" width="1440" height="1171" loading="lazy"></figure>
-          <figure><img src="assets/prototype-evidence.png" alt="Evidence screen: table of the 30 original Document Upload comments with filters" width="1440" height="1074" loading="lazy"></figure>
-        </div>
-      </div>
-    </div>
-    <div class="phases-band">
-      <div class="wrap phases">
-        <div class="phase"><span class="step">Step 1</span><h3>Define</h3><p>User: Product Manager. Job: find recurring friction without losing the evidence.</p><div class="num"><b>4</b>dimensions: theme, type, sentiment, severity</div></div>
-        <div class="phase"><span class="step">Step 2</span><h3>Experiment</h3><p>Three prompt versions tested on a 40-record development set. V1 won on overall exact match.</p><div class="num"><b>67.5%</b>dev exact match (V1)</div></div>
-        <div class="phase"><span class="step">Step 3</span><h3>Lock &amp; test</h3><p>24 records hash-locked before choosing a model, then tested once.</p><div class="num"><b>100%</b>theme · 58.3% severity</div></div>
-        <div class="phase"><span class="step">Step 4</span><h3>Decide</h3><p>Severity over-predicts impact (7 of 10 "no issue" → "low"). So it's a review signal, never a priority driver.</p><div class="num"><b>PM</b>owns the priority</div></div>
+      <div class="about-points">
+        <div class="about-point"><b>Understand</b><span>Start with the user, the context and the real problem.</span></div>
+        <div class="about-point"><b>Structure</b><span>Turn scattered information into a clear way forward.</span></div>
+        <div class="about-point"><b>Validate</b><span>Use evidence to test assumptions and support decisions.</span></div>
       </div>
     </div>
   </section>
 
-  <section id="fit">
+  <section id="project">
     <div class="wrap">
-      <h2>One project,<br>three lenses</h2>
+      <p class="section-kicker">Featured project · Product &amp; data case study</p>
+      <div class="project-heading">
+        <h2>Voice of Customer<br>AI Copilot</h2>
+        <div>
+          <p>How might a Product Manager turn large volumes of customer comments into useful product signals — without losing the evidence behind them?</p>
+          <p style="margin-top:13px">I explored this question by building an AI-assisted feedback analysis workflow, evaluating its classification quality, and translating the findings into a product decision.</p>
+          <div class="cta project-actions">
+            <a class="btn" href="demo/" target="_blank" rel="noopener">Explore the demo
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg>
+            </a>
+            <a class="btn ghost" href="assets/VoC-Copilot-Case-Study.pdf" target="_blank" rel="noopener">Read the case study</a>
+            <a class="btn ghost" href="https://github.com/talzahor-ops/voice-of-customer-ai-copilot" target="_blank" rel="noopener">View the code</a>
+          </div>
+          <p class="project-note">Independent portfolio project · Synthetic feedback data · Not a production system</p>
+        </div>
+      </div>
+
+      <div class="shots">
+        <a class="demo-card" href="demo/" target="_blank" rel="noopener" aria-label="Open the Voice of Customer AI Copilot demo">
+          <img src="assets/prototype-overview.png" alt="Copilot overview showing customer feedback records grouped into product themes" width="1440" height="1080">
+          <span class="demo-tag">Open interactive demo
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg>
+          </span>
+        </a>
+        <div class="stack">
+          <figure><img src="assets/prototype-insights.png" alt="Insights view with an AI-generated summary and supporting metrics" width="1440" height="1171" loading="lazy"></figure>
+          <figure><img src="assets/prototype-evidence.png" alt="Evidence view showing original customer feedback records" width="1440" height="1074" loading="lazy"></figure>
+        </div>
+      </div>
+
+      <div class="project-facts" aria-label="Project evaluation highlights">
+        <div class="fact"><strong>150</strong><span>synthetic feedback records analysed</span></div>
+        <div class="fact"><strong>4</strong><span>classification dimensions defined</span></div>
+        <div class="fact"><strong>24</strong><span>records in a locked holdout test</span></div>
+        <div class="fact"><strong>45.8%</strong><span>exact-match accuracy on the holdout set</span></div>
+      </div>
+
+      <div class="phases-band">
+        <div class="phases">
+          <div class="phase"><span class="step">01 · Define</span><h3>Frame the problem</h3><p>Focused on a Product Manager’s need to identify recurring customer friction while keeping the original feedback traceable.</p></div>
+          <div class="phase"><span class="step">02 · Experiment</span><h3>Test the approach</h3><p>Compared three prompt versions on a 40-record development set. Version 1 reached 67.5% exact match.</p></div>
+          <div class="phase"><span class="step">03 · Evaluate</span><h3>Check reliability</h3><p>Evaluated the selected approach once on 24 records held out from prompt development.</p></div>
+          <div class="phase"><span class="step">04 · Decide</span><h3>Keep humans in control</h3><p>Used the evaluation errors to define what the AI can support — and what must remain a human decision.</p></div>
+        </div>
+      </div>
+
+      <div class="decision">
+        <p class="label">The key product decision</p>
+        <p>On the locked holdout set, theme classification reached <b>100%</b>, while severity reached <b>58.3%</b>. The model also tended to assign a low severity where the reference label was “No Issue”. I therefore treated severity as a <b>review signal — not a priority score</b>. The AI can help organize feedback; a Product Manager remains responsible for interpreting it and setting priorities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <p class="section-kicker">What I bring</p>
+      <h2>One way of thinking.<br>Different applications.</h2>
       <div class="lenses">
-        <div class="lens"><h3>Product</h3><p>User, problem, job-to-be-done, and a clear decision on what the AI is allowed to do.</p></div>
-        <div class="lens"><h3>Project</h3><p>Phased plan, locked test data, documented decisions. Led instructor teams and ran full courses in the IDF.</p></div>
-        <div class="lens"><h3>Data</h3><p>Python, SQL, Excel. Built the evaluation, confusion matrix and error analysis myself.</p></div>
+        <div class="lens"><span class="number">01 / PRODUCT</span><h3>Understand the user</h3><p>Translate a broad problem into a user need, explore possible solutions and use evidence to make better product decisions.</p></div>
+        <div class="lens"><span class="number">02 / PROJECT &amp; OPERATIONS</span><h3>Make work happen</h3><p>Organize people, timelines and information. My military training role involved coordinating instructors and commanding a C2 instructor course.</p></div>
+        <div class="lens"><span class="number">03 / DATA &amp; ANALYSIS</span><h3>Find the signal</h3><p>Use Python, SQL and Excel to explore information, identify patterns and communicate findings clearly.</p></div>
       </div>
     </div>
   </section>
 
   <section id="experience">
     <div class="wrap">
-      <h2>Experience</h2>
+      <p class="section-kicker">Background</p>
+      <h2>Experience &amp; education</h2>
       <div class="exp">
-        <div class="row"><span class="d">2024 – 2028</span><h3>B.Sc. Industrial Eng. &amp; Mgmt<small>Afeka College</small></h3><p>SQL, Python (OOP), statistics, operations research, process analysis and modeling, information systems.</p></div>
-        <div class="row"><span class="d">2023 – 2025</span><h3>Social Media Manager<small>The Cooking Studio</small></h3><p>Ran the brand's channels and analyzed engagement metrics to improve results.</p></div>
-        <div class="row"><span class="d">2022</span><h3>Customer Service<small>Harel Insurance</small></h3><p>Health-insurance cases across information systems and multiple stakeholders.</p></div>
-        <div class="row"><span class="d">2019 – 2021</span><h3>C2 Instructor &amp; Course Commander<small>IDF Home Front Command</small></h3><p>Led a team of instructors, planned training programs and certification, and commanded a full instructor course.</p></div>
+        <div class="row">
+          <span class="d">2024 – 2028</span>
+          <h3>B.Sc. Industrial Engineering &amp; Management<small>Afeka Academic College of Engineering</small></h3>
+          <p>Coursework includes statistics, operations research, information systems, process analysis and modelling, SQL and Python.</p>
+        </div>
+        <div class="row">
+          <span class="d">2023 – 2025</span>
+          <h3>Social Media Manager<small>The Cooking Studio</small></h3>
+          <p>Managed the brand’s social media presence, planned content and used channel performance to inform ongoing activity.</p>
+        </div>
+        <div class="row">
+          <span class="d">2022</span>
+          <h3>Customer Service Representative<small>Harel Insurance</small></h3>
+          <p>Handled health-insurance customer inquiries and cases, working with internal systems and helping customers navigate service processes.</p>
+        </div>
+        <div class="row">
+          <span class="d">2019 – 2021</span>
+          <h3>Senior C2 Systems Instructor &amp; Course Commander<small>Israel Home Front Command</small></h3>
+          <p>Coordinated instructor assignments and training activity, supported course content and administration, and commanded a C2 instructor course.</p>
+        </div>
       </div>
-      <div class="skills" aria-label="Skills">
-        <span>SQL</span><span>Python</span><span>Excel (Advanced)</span><span>PowerPoint</span><span>Claude Code · Copilot · Codex</span><span>Illustrator</span><span>Premiere Pro</span><span>Hebrew · English · Spanish</span>
+
+      <div class="skill-groups">
+        <div class="skill-group"><h3>Data &amp; analytical tools</h3><div class="skills"><span>SQL</span><span>Python</span><span>Advanced Excel</span></div></div>
+        <div class="skill-group"><h3>Work &amp; creative tools</h3><div class="skills"><span>PowerPoint</span><span>Illustrator</span><span>Premiere Pro</span></div></div>
+        <div class="skill-group"><h3>AI-assisted tools</h3><div class="skills"><span>Claude Code</span><span>GitHub Copilot</span><span>OpenAI Codex</span></div></div>
       </div>
+      <p class="language-line"><b>Languages:</b> Hebrew (native) · English (full professional proficiency) · Spanish (basic)</p>
     </div>
   </section>
 </main>
 
 <footer id="contact">
   <div class="wrap">
-    <h2>Let's talk.</h2>
-    <p class="lede">Herzliya · Hebrew &amp; English</p>
+    <p class="section-kicker" style="color:var(--blue)">Get in touch</p>
+    <h2>Let’s connect.</h2>
+    <p class="lede">Interested in opportunities where product thinking, analysis and getting things done come together.</p>
     <div class="cta">
       <a class="btn" href="mailto:tal.zahor@gmail.com">Email me</a>
-      <!-- TODO: add LinkedIn URL -->
+      <a class="btn ghost" href="https://www.linkedin.com/in/talzahor/" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn ghost" href="assets/Tal-Zahor-CV.pdf" target="_blank" rel="noopener">Download CV</a>
     </div>
-    <div class="fine"><span>tal.zahor@gmail.com</span><span>Project data is synthetic. No real customer data was used.</span></div>
+    <div class="fine"><span>tal.zahor@gmail.com · Herzliya, Israel</span><span>Portfolio project uses synthetic data only.</span></div>
   </div>
 </footer>
-
 </body>
 </html>
