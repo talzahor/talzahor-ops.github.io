@@ -84,11 +84,11 @@ h2{font-size:clamp(38px,5.4vw,68px);font-weight:800;letter-spacing:-.035em;line-
 .demo-tag svg{width:16px;height:16px}
 
 /* phases */
-.phases-band{background:transparent;margin-top:72px;border-block:1.5px solid var(--line)}
+.phases-band{background:var(--butter);margin-top:72px;border-block:1.5px solid var(--line)}
 .phases{display:grid;grid-template-columns:repeat(4,1fr)}
-.phase{padding:28px 22px 30px;display:flex;flex-direction:column;gap:10px;min-width:0;background:#FFF1C9;border-radius:16px;margin:18px 10px}
-.phase+.phase{padding-left:22px;border-left:0}
-.phase .step{font-family:var(--mono);font-size:12px;color:#80652B}
+.phase{padding:36px 28px 40px 0;display:flex;flex-direction:column;gap:10px;min-width:0}
+.phase+.phase{padding-left:28px;border-left:1.5px solid var(--line)}
+.phase .step{font-family:var(--mono);font-size:12px;color:var(--soft)}
 .phase h3{font-size:24px;font-weight:700;color:var(--walnut)}
 .phase p{color:var(--soft);font-size:16px}
 .phase .num{margin-top:auto;padding-top:14px;font-family:var(--mono);font-size:13px;color:var(--ink);font-variant-numeric:tabular-nums}
@@ -101,8 +101,8 @@ h2{font-size:clamp(38px,5.4vw,68px);font-weight:800;letter-spacing:-.035em;line-
 .lens p{margin-top:10px;color:var(--ink)}
 
 /* experience */
-.exp{margin-top:40px;border-top:1.5px solid var(--walnut);display:grid;gap:12px}
-.exp .row{display:grid;grid-template-columns:170px 1.1fr 1.3fr;gap:24px;padding:22px 20px;background:#FCE5E3;border:1px solid #F4D0CE;border-radius:14px;align-items:baseline}
+.exp{margin-top:40px;border-top:1.5px solid var(--walnut)}
+.exp .row{display:grid;grid-template-columns:170px 1.1fr 1.3fr;gap:24px;padding-block:24px;border-bottom:1.5px solid var(--line);align-items:baseline}
 .exp .d{font-family:var(--mono);font-size:13px;color:var(--soft);font-variant-numeric:tabular-nums}
 .exp h3{font-size:21px;font-weight:700;color:var(--walnut);line-height:1.25}
 .exp h3 small{display:block;font-size:15px;font-weight:500;color:var(--soft);margin-top:2px}
