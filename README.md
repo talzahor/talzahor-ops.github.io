@@ -1,4 +1,4 @@
-# talzahor-ops.github.io
+# talzahor.github.io
 
 Portfolio site for Tal Zahor, served by GitHub Pages at https://talzahor-ops.github.io
 
